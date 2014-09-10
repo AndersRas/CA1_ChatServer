@@ -1,0 +1,38 @@
+sep 10, 2014 12:10:50 PM server.ChatServer main
+INFO: Connected to a client
+sep 10, 2014 12:10:50 PM server.ChatServer main
+INFO: Connected to a client
+sep 10, 2014 12:10:51 PM server.ClientHandler run
+INFO: Received the message:  
+sep 10, 2014 12:10:51 PM server.ClientHandler run
+INFO: Received the message:  
+sep 10, 2014 12:10:53 PM server.ClientHandler run
+INFO: Received the message: HEJ 
+sep 10, 2014 12:10:57 PM server.ClientHandler run
+INFO: Received the message: HEJ 
+sep 10, 2014 12:10:57 PM server.ClientHandler run
+INFO: Received the message: HEJ 
+sep 10, 2014 12:16:16 PM server.ChatServer main
+INFO: Connected to a client
+sep 10, 2014 12:16:16 PM server.ClientHandler run
+INFO: Received the message: HELLO WORLD 
+sep 10, 2014 12:16:16 PM server.ClientHandler run
+INFO: Received the message: HELLO WORLD 
+sep 10, 2014 12:16:16 PM server.ClientHandler run
+INFO: Closed a Connection
+sep 10, 2014 12:16:42 PM server.ChatServer main
+INFO: Connected to a client
+sep 10, 2014 12:16:42 PM server.ChatServer main
+INFO: Connected to a client
+sep 10, 2014 12:16:46 PM server.ClientHandler run
+INFO: Received the message: HEJ 
+sep 10, 2014 12:16:46 PM server.ClientHandler run
+INFO: Received the message: HEJ 
+sep 10, 2014 12:21:23 PM server.ChatServer main
+INFO: Connected to a client
+sep 10, 2014 12:21:24 PM server.ChatServer main
+INFO: Connected to a client
+sep 10, 2014 12:21:26 PM server.ClientHandler run
+INFO: Received the message: HEJ 
+sep 10, 2014 12:21:26 PM server.ClientHandler run
+INFO: Received the message: HEJ 
