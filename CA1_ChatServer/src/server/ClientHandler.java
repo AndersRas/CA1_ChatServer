@@ -39,7 +39,6 @@ public class ClientHandler implements Runnable
             String message = input.nextLine(); //IMPORTANT blocking call
             Logger.getLogger(ChatServer.class.getName()).log(Level.INFO, String.format("Received the message: %1$S ",message));
             while (!message.equals(ProtocolStrings.STOP)) {
-                writer.println(message.toUpperCase());
                 ChatServer.send(message);
                 Logger.getLogger(ChatServer.class.getName()).log(Level.INFO, String.format("Received the message: %1$S ",message.toUpperCase()));
                 message = input.nextLine(); //IMPORTANT blocking call
