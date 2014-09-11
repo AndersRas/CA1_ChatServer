@@ -9,6 +9,7 @@ package server;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,12 +24,33 @@ public class ClientHandler implements Runnable
     private final Socket socket;
     private final Scanner input;
     private final PrintWriter writer;
+    private String clientname;
 
     public ClientHandler(Socket socket) throws IOException
     {
         this.socket = socket;
         input = new Scanner(socket.getInputStream());
         writer = new PrintWriter(socket.getOutputStream(), true);
+    }
+    
+    public void sendOnlineUsers (List<String> clients)
+    {
+        String clientString = "";
+        for (String user : clients)
+        {
+            clientString = clientString + user+", ";
+        }
+        send("ONLINE# " + clientString);
+    }
+    
+    public String getclients()
+    {
+        return clientname;
+    }
+    
+    public void setclients(String clientname)
+    {
+        this.clientname = clientname;
     }
 
     @Override
@@ -37,6 +59,12 @@ public class ClientHandler implements Runnable
         try
         {
             String message = input.nextLine(); //IMPORTANT blocking call
+            String [] stringarray = message.split("#");
+            String protocolcommand = stringarray[0];
+            if (message.equals("CONNECT#"))
+            {
+                ChatServer.Online();
+            }
             Logger.getLogger(ChatServer.class.getName()).log(Level.INFO, String.format("Received the message: %1$S ",message));
             while (!message.equals(ProtocolStrings.STOP)) {
                 ChatServer.send(message);
