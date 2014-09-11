@@ -17,5 +17,7 @@ public class User {
         this.name = name;
     }
     
-    
+    public String getname(){
+        return name;
+    }
 }
