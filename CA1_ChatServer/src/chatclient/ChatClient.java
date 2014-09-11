@@ -12,8 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import shared.ProtocolStrings;
 
-
-class Test implements ChatListener 
+class Test implements ChatListener
 {
 
     @Override
@@ -33,8 +32,6 @@ public class ChatClient extends Thread
     private PrintWriter output;
     List<ChatListener> listeners = new ArrayList();
     List<User> users = new ArrayList();
-    User user = new User();
-    private String Uname;
 
     public void connect(String address, int port) throws UnknownHostException, IOException
     {
@@ -64,8 +61,9 @@ public class ChatClient extends Thread
     {
         for (ChatListener l : listeners)
         {
-            if(!l.equals(this)){
-            l.messageArrived(msg);
+            if (!l.equals(this))
+            {
+                l.messageArrived(msg);
             }
         }
     }
@@ -95,11 +93,24 @@ public class ChatClient extends Thread
         }
         return msg;
     }
-    
-    public boolean logIn()
+
+    public boolean logIn(String Uname)
     {
-        if (Uname.matches(users.))
-        return false;   
+        boolean exist = false;
+        for (User u : users)
+        {
+            if (Uname.equalsIgnoreCase(u.getname()))
+            {
+                exist = true;
+            }
+        }
+        if (exist = false)
+        {
+            User user = new User(Uname);
+            users.add(user);
+            return true;
+        }
+        return false;
     }
 
     public static void main(String[] args)
