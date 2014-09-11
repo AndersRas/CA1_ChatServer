@@ -32,6 +32,7 @@ public class ChatClient extends Thread
     private Scanner input;
     private PrintWriter output;
     List<ChatListener> listeners = new ArrayList();
+    List<User> users = new ArrayList();
 
     public void connect(String address, int port) throws UnknownHostException, IOException
     {
