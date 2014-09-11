@@ -33,6 +33,8 @@ public class ChatClient extends Thread
     private PrintWriter output;
     List<ChatListener> listeners = new ArrayList();
     List<User> users = new ArrayList();
+    User user = new User();
+    private String Uname;
 
     public void connect(String address, int port) throws UnknownHostException, IOException
     {
@@ -92,6 +94,12 @@ public class ChatClient extends Thread
             }
         }
         return msg;
+    }
+    
+    public boolean logIn()
+    {
+        if (Uname.matches(users.))
+        return false;   
     }
 
     public static void main(String[] args)
