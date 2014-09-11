@@ -61,7 +61,9 @@ public class ChatClient extends Thread
     {
         for (ChatListener l : listeners)
         {
+            if(!l.equals(this)){
             l.messageArrived(msg);
+            }
         }
     }
 

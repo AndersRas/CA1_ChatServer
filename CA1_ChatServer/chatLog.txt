@@ -1,12 +1,12 @@
-sep 10, 2014 12:45:00 PM server.ChatServer main
+sep 10, 2014 1:17:39 PM server.ChatServer main
 INFO: Connected to a client
-sep 10, 2014 12:45:01 PM server.ChatServer main
+sep 10, 2014 1:17:40 PM server.ChatServer main
 INFO: Connected to a client
-sep 10, 2014 12:45:02 PM server.ClientHandler run
+sep 10, 2014 1:17:43 PM server.ClientHandler run
 INFO: Received the message: HEJ 
-sep 10, 2014 12:45:02 PM server.ClientHandler run
+sep 10, 2014 1:17:43 PM server.ClientHandler run
 INFO: Received the message: HEJ 
-sep 10, 2014 12:45:08 PM server.ClientHandler run
-INFO: Received the message: GODDAG 
-sep 10, 2014 12:45:08 PM server.ClientHandler run
-INFO: Received the message: GODDAG 
+sep 10, 2014 1:17:47 PM server.ClientHandler run
+INFO: Received the message: HEJ 
+sep 10, 2014 1:17:47 PM server.ClientHandler run
+INFO: Received the message: HEJ 
