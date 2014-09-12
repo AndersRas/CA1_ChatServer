@@ -37,13 +37,27 @@ public class ChatServer {
           c.send(msg.toUpperCase());
   }
   
+  public static void Online()
+  {
+       List<String> onlineusers = new ArrayList();
+       for (ClientHandler clienthandler : clients)
+      {
+          onlineusers.add(clienthandler.getclients());
+      }
+       for (ClientHandler clienthandler : clients)
+       {
+           clienthandler.sendOnlineUsers(onlineusers);
+       }
+  }
+  
+  
   public static void removeHandler(ClientHandler ch)
   {
       clients.remove(ch);
   }
 
    public static void main(String[] args) {
-    int port = Integer.parseInt(properties.getProperty("port"));
+    int port = Integer.parseInt(properties.getProperty("port0"));
     String ip = properties.getProperty("serverIp");
     String logFile = properties.getProperty("logFile");
     Logger.getLogger(ChatServer.class.getName()).log(Level.INFO, "Sever started");
