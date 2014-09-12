@@ -94,24 +94,25 @@ public class ChatClient extends Thread
         return msg;
     }
 
-    public boolean logIn(String Uname)
-    {
-        boolean exist = false;
-        for (User u : users)
-        {
-            if (Uname.equalsIgnoreCase(u.getname()))
-            {
-                exist = true;
-            }
-        }
-        if (exist = false)
-        {
-            User user = new User(Uname);
-            users.add(user);
-            return true;
-        }
-        return false;
-    }
+    // not need anymore - Anders
+//    public boolean logIn(String Uname)
+//    {
+//        boolean exist = false;
+//        for (User u : users)
+//        {
+//            if (Uname.equalsIgnoreCase(u.getname()))
+//            {
+//                exist = true;
+//            }
+//        }
+//        if (exist = false)
+//        {
+//            User user = new User(Uname);
+//            users.add(user);
+//            return true;
+//        }
+//        return false;
+//    }
 
     public static void main(String[] args)
     {
